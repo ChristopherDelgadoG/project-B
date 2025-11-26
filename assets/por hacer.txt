@@ -1,0 +1,13 @@
+-Que cuando se use el dash, el jugador sea inmune a los disparos. LISTO
+-Implementar las monedas que aumentan según el tiempo de juego. LISTO
+-Implementar la tienda.
+-Implementar las mejoras y probar que funcionen correctamente.
+-Al morir, el juego abre la tienda y el enemigo gasta todas las monedas disponibles para comprar mejoras.
+-Implementar el botón de pausa (tecla ESC) que permita pausar el juego y salir.
+-Implementar que las mejoras y monedas se guarden al salir y entrar en el juego.
+-Implementar un botón de reset oculto para reiniciar los datos del juego (mejoras compradas y monedas ganadas).
+-Que la compra de mejoras sea automática y al azar, tomando en cuenta la cantidad de monedas disponibles (si es posible, considerar un contador de los movimientos más usados del jugador).
+-Agregar más mejoras (mejoras de daño, cantidad de balas, tipos de balas, más armas, más velocidad de disparo, obstáculos del escenario, cambios de escenario, etc.).
+-Agregar un final al juego.
+-Permitir seguir jugando incluso después del final y que este pueda ser activado de nuevo si el jugador lo desea.
+-Agregar cinemáticas al inicio y diálogos ocasionales durante el juego.

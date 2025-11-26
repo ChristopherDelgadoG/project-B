@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dghqh21rrinv7"]
+
+[ext_resource type="Texture2D" uid="uid://cy0kh4ywb7ngh" path="res://assets/Default (64px)/hand_token.png" id="1_3sgkg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcu48"]
+bg_color = Color(0.558601, 0.287904, 0.0968434, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.835294, 0.835294, 0, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 2
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[node name="item_tienda" type="Node2D"]
+
+[node name="Item 1" type="PanelContainer" parent="."]
+theme_override_styles/panel = SubResource("StyleBoxFlat_dcu48")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Item 1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="icon" type="TextureRect" parent="Item 1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_3sgkg")
+
+[node name="desc" type="Label" parent="Item 1/HBoxContainer"]
+layout_mode = 2
+text = "Balas electricas"
+
+[node name="cost" type="Label" parent="Item 1/HBoxContainer"]
+layout_mode = 2
+text = "$100"

@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkmj0w16b2ore"]
+
+[ext_resource type="Texture2D" uid="uid://bwgn6n1jogb4s" path="res://assets/Retina/tile_heart.png" id="1_nd7lo"]
+[ext_resource type="FontFile" uid="uid://bw7lqmxotvsj5" path="res://assets/fonts/gear6/Gear6_Spark.otf" id="1_nus1y"]
+[ext_resource type="Texture2D" uid="uid://bxjj06trbeprr" path="res://assets/Default (64px)/dollar.png" id="2_jnmme"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1w22y"]
+font = ExtResource("1_nus1y")
+font_size = 40
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nus1y"]
+font_size = 40
+font_color = Color(0.864156, 0.767597, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 192.0
+offset_bottom = 60.0
+text = "Vida:"
+label_settings = SubResource("LabelSettings_1w22y")
+
+[node name="caja" type="HBoxContainer" parent="Label"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = -3.0
+offset_right = 274.0
+offset_bottom = 37.0
+scale = Vector2(1.72661, 1.86646)
+
+[node name="vida1" type="TextureRect" parent="Label/caja"]
+layout_mode = 2
+texture = ExtResource("1_nd7lo")
+expand_mode = 2
+
+[node name="vida2" type="TextureRect" parent="Label/caja"]
+layout_mode = 2
+texture = ExtResource("1_nd7lo")
+expand_mode = 2
+
+[node name="vida3" type="TextureRect" parent="Label/caja"]
+layout_mode = 2
+texture = ExtResource("1_nd7lo")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_top = 16.0
+offset_right = -216.0
+offset_bottom = 39.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 8
+
+[node name="coins" type="HBoxContainer" parent="Label2"]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 91.0
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Label2/coins"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_jnmme")
+stretch_mode = 6
+
+[node name="dinero" type="Label" parent="Label2/coins"]
+layout_mode = 2
+text = ": 0"
+label_settings = SubResource("LabelSettings_nus1y")

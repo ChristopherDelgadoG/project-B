@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.import/
+.export/
+mono_crash.*
+*.tmp
+bin/
+obj/

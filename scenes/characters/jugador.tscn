@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq6oh7lfovaom"]
+
+[ext_resource type="Script" uid="uid://cmj8j7h6cuxnt" path="res://scrpits/cuadrado.gd" id="1_58w5u"]
+[ext_resource type="Texture2D" uid="uid://c7s6n3hx64e3t" path="res://assets/Thick outline/tile_0001.png" id="2_nyuym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xvuw"]
+size = Vector2(52, 52)
+
+[node name="jugador" type="CharacterBody2D" groups=["player"]]
+disable_mode = 1
+collision_mask = 14
+motion_mode = 1
+floor_constant_speed = true
+script = ExtResource("1_58w5u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1875, 1.1875)
+texture = ExtResource("2_nyuym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6xvuw")
