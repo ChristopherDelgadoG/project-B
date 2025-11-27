@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dghqh21rrinv7"]
+[gd_scene load_steps=3 format=3 uid="uid://dghqh21rrinv7"]
 
 [ext_resource type="Texture2D" uid="uid://cy0kh4ywb7ngh" path="res://assets/Default (64px)/hand_token.png" id="1_3sgkg"]
-[ext_resource type="Script" uid="uid://8d2yinfckevh" path="res://scenes/item_tienda.gd" id="1_dcu48"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcu48"]
 bg_color = Color(0.558601, 0.287904, 0.0968434, 1)
@@ -20,28 +19,24 @@ expand_margin_left = 6.0
 expand_margin_right = 6.0
 expand_margin_bottom = 6.0
 
-[node name="item_tienda" type="Node2D" node_paths=PackedStringArray("icon", "desc", "cost")]
-script = ExtResource("1_dcu48")
-icon = NodePath("Item/HBoxContainer/icon")
-desc = NodePath("Item/HBoxContainer/desc")
-cost = NodePath("Item/HBoxContainer/cost")
+[node name="item_tienda" type="Node2D"]
 
-[node name="Item" type="PanelContainer" parent="."]
+[node name="Item 1" type="PanelContainer" parent="."]
 theme_override_styles/panel = SubResource("StyleBoxFlat_dcu48")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Item"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Item 1"]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="icon" type="TextureRect" parent="Item/HBoxContainer"]
+[node name="icon" type="TextureRect" parent="Item 1/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_3sgkg")
 
-[node name="desc" type="Label" parent="Item/HBoxContainer"]
+[node name="desc" type="Label" parent="Item 1/HBoxContainer"]
 layout_mode = 2
 text = "Balas electricas"
 
-[node name="cost" type="Label" parent="Item/HBoxContainer"]
+[node name="cost" type="Label" parent="Item 1/HBoxContainer"]
 layout_mode = 2
 text = "$100"
