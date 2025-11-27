@@ -1,9 +1,16 @@
 extends Node2D
 
 @export var vidas := 3
+@export var item_tienda: PackedScene
+@onready var tienda = $"../Tienda/CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer"
+
+var lista_mejoras = [
+	{"icono": preload("res://assets/Default (64px)/award.png"), "descripcion": "Aumenta velocidad", "costo": 10},
+	{"icono": preload("res://assets/Default (64px)/award.png"), "descripcion": "Mejora disparo", "costo": 15},
+	{"icono": preload("res://assets/Default (64px)/award.png"), "descripcion": "Dash más largo", "costo": 20}
+]
 
 
-var barra_instanciada
 var corazones = []
 var monedas = 0
 var tiempo_acumulado = 0.0
@@ -20,6 +27,11 @@ func _process(delta):
 			lMonedas.text = ": " + str(monedas)
 
 func _ready():
+	for mejora in lista_mejoras:
+		var item = item_tienda.instantiate()
+		item.configurar(mejora["icono"], mejora["descripcion"], mejora["costo"])
+		tienda.add_child(item)
+
 	corazones = [
 		get_node("../TileMapLayer/bvida/Label/caja/vida1"),
 		get_node("../TileMapLayer/bvida/Label/caja/vida2"),
