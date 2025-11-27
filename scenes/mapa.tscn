@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://cnvwpvo8qjb2w"]
+[gd_scene load_steps=9 format=4 uid="uid://cnvwpvo8qjb2w"]
 
 [ext_resource type="Texture2D" uid="uid://byi2pcc1c6avc" path="res://assets/prado.png" id="1_nrd35"]
 [ext_resource type="PackedScene" uid="uid://cq6oh7lfovaom" path="res://scenes/characters/jugador.tscn" id="2_atgyb"]
 [ext_resource type="PackedScene" uid="uid://ce0hy8p5yoiw5" path="res://scenes/characters/enemigo.tscn" id="3_k7lwh"]
 [ext_resource type="PackedScene" uid="uid://brs4lbg3nhgvk" path="res://scenes/limites.tscn" id="4_6i2c2"]
 [ext_resource type="PackedScene" uid="uid://bkmj0w16b2ore" path="res://scenes/vida.tscn" id="5_k7lwh"]
-[ext_resource type="PackedScene" uid="uid://dghqh21rrinv7" path="res://scenes/item_tienda.tscn" id="7_6i2c2"]
 [ext_resource type="Script" uid="uid://bpe5kqrl730pr" path="res://scrpits/gamecontroler.gd" id="7_6pxv8"]
-[ext_resource type="PackedScene" uid="uid://d3w5vob0jhvaq" path="res://scenes/tienda.tscn" id="8_6pxv8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70f7c"]
 texture = ExtResource("1_nrd35")
@@ -4140,8 +4138,5 @@ scale = Vector2(4.21569, 4.2381)
 
 [node name="gamecontroler" type="Node2D" parent="."]
 script = ExtResource("7_6pxv8")
-item_tienda = ExtResource("7_6i2c2")
-
-[node name="Tienda" parent="." instance=ExtResource("8_6pxv8")]
 
 [connection signal="hit" from="TileMapLayer/jugador" to="gamecontroler" method="_on_jugador_hit"]

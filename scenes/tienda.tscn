@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3w5vob0jhvaq"]
+[gd_scene load_steps=4 format=3 uid="uid://d3w5vob0jhvaq"]
 
 [ext_resource type="Theme" uid="uid://b4ffhb7sb01a1" path="res://assets/themes/inite.tres" id="1_0wul1"]
+[ext_resource type="Texture2D" uid="uid://cy0kh4ywb7ngh" path="res://assets/Default (64px)/hand_token.png" id="2_3a5gv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lx8e"]
+bg_color = Color(0.558601, 0.287904, 0.0968434, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.835294, 0.835294, 0, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 2
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
 
 [node name="Tienda" type="Node2D"]
 
@@ -36,10 +54,37 @@ text = "SHOP
 "
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
-clip_contents = false
 layout_mode = 2
 follow_focus = true
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
 
 [node name="BoxContainer" type="BoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Item 1" type="PanelContainer" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4lx8e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer/Item 1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer/Item 1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_3a5gv")
+
+[node name="desc" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer/Item 1/HBoxContainer"]
+layout_mode = 2
+text = "Balas electricas"
+
+[node name="cost" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer/Item 1/HBoxContainer"]
+layout_mode = 2
+text = "$100"
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer/Item 1/HBoxContainer"]
+layout_mode = 2
+
+[node name="VScrollBar" type="VScrollBar" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer/ScrollContainer/BoxContainer"]
 layout_mode = 2
